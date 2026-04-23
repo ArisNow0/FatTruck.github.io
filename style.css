@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Oswald';
     background: #111;
@@ -16,6 +20,7 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 15px 40px;
+    height: 100px;
     background: rgb(0, 0, 0);
     z-index: 100;
 }
@@ -91,6 +96,7 @@ nav a {
 }
 
 .map {
+  scroll-margin-top: 100px;
     height: 680px;
     text-align: center;
     overflow: hidden;
@@ -126,6 +132,7 @@ nav a {
 }
 
 .deals {
+  scroll-margin-top: 100px;
     font-size: 3vh;
     height: 650px;
     text-align: center;
