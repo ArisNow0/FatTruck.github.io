@@ -339,7 +339,6 @@ async function initMap() {
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
-  // --- ЛИНИЯ МАРШРУТА ---
   const routeLayer = L.geoJSON(routeData, {
     style: {
       color: "#ff4d00", 
@@ -347,7 +346,7 @@ async function initMap() {
       opacity: 0.5
     }
   }).addTo(map);
-  // ----------------------
+
 
   const dotIcon = L.divIcon({
     html: '<div class="inner-dot"></div>',
@@ -379,7 +378,6 @@ async function initMap() {
     }
   }).addTo(map);
 
-  // Подвязка кликов таймлайна
   const stopElements = document.querySelectorAll('.stop');
   stopElements.forEach(stop => {
     stop.addEventListener('click', () => {
@@ -392,13 +390,53 @@ async function initMap() {
       }
     });
   });
-
-  // Автоматический зум на всю область маршрута
   const group = L.featureGroup([routeLayer, pointsLayer]);
   map.fitBounds(group.getBounds(), { padding: [50, 50] });
-
-  // Логика Drag-scroll
-  initDragScroll(); 
 }
-
 initMap();
+
+const burger = document.getElementById('burger-menu');
+const nav = document.getElementById('nav-links');
+const navLinks = document.querySelectorAll('.headbut a');
+
+// Устанавливаем начальное состояние через GSAP, чтобы избежать скачков
+gsap.set(nav, { display: "none", y: -20, opacity: 0 });
+
+const menuAnim = gsap.timeline({ paused: true });
+
+menuAnim.to(nav, {
+    duration: 0.5,
+    display: "flex",
+    opacity: 1,
+    y: 0,            // Выезжает на свое место
+    ease: "power3.out"
+})
+.from(navLinks, {
+    duration: 0.5,
+    opacity: 0,
+    x: -20,          // Ссылки чуть вылетают сбоку для динамики
+    stagger: 0.1,    // Появление по очереди
+    ease: "power2.out"
+}, "-=0.3");         // Нахлест анимаций, чтобы ссылки начали появляться до того, как фон полностью зафиксируется
+
+let isOpen = false;
+
+burger.addEventListener('click', () => {
+    if (!isOpen) {
+        menuAnim.play();
+        burger.classList.add('open');
+    } else {
+        menuAnim.reverse();
+        burger.classList.remove('open');
+    }
+    isOpen = !isOpen;
+});
+
+// Закрытие при клике на ссылку
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        menuAnim.reverse();
+        burger.classList.remove('open');
+        isOpen = false;
+    });
+});

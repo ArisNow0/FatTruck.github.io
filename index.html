@@ -8,26 +8,40 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
-
+    <script src="https://kit.fontawesome.com/06763759a1.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
     <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 
 <body>
 
-    <header>
-        <div class="logo">FAT<span>TRUCK</span></div>
-        <nav>
-            <a href="#menu">Меню</a>
-            <a href="#map">Де нас знайти</a>
-            <a href="#deals">Знижки</a>
-            <a href="#contact">Контакти</a>
-        </nav>
-    </header>
+<header>
+    <div class="logo">FAT<span>TRUCK</span></div>
+    <div class="color"></div>
+    
+    <nav class="headbutt">
+        <a href="#menu">Меню</a>
+        <a href="#deals">Знижки</a>
+        <a href="#map">Де нас знайти</a>
+        <a href="#contact">Контакти</a>
+    </nav>
+
+    <div class="burger-icon" id="burger-menu">
+        <i class="fa-solid fa-burger"></i>
+    </div>
+
+    <nav class="headbut" id="nav-links">
+        <a href="#menu">Меню</a>
+        <a href="#deals">Знижки</a>
+        <a href="#map">Де нас знайти</a>
+        <a href="#contact">Контакти</a>
+    </nav>
+</header>
 
     <!-- HERO -->
     <section class="hero">
@@ -159,14 +173,53 @@
     </section>
 
     <!-- КОНТАКТЫ -->
-    <section id="contact" class="section dark">
-        <h2>Контакты</h2>
-        <p>📞 +380 XX XXX XX XX</p>
-        <p>📍 Днепр</p>
-    </section>
+<section id="contact" class="contact">
+    <div class="overlay">
+        <h2>На зв'язку</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span class="contact-label">Телефон:</span>
+                    <a href="tel:+380633340251" class="contact-value">+380 63 334 02 51</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-label">Локація:</span>
+                    <span class="contact-value">Дніпро, Україна</span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-label">Соцмережі:</span>
+                    <div class="social-links">
+                        <a target="_blank" href="https://arisnow0.github.io/">INSTAGRAM</a>
+                        <a target="_blank" href="https://t.me/ArisNow">TELEGRAM</a>
+                        <a target="_blank" href="https://arisnow0.github.io/">TIKTOK</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="developer-card">
+    <div class="dev-badge">DEVELOPER</div>
+    <h3>Про проєкт</h3>
+    <p>Цей сайт створений мною як демонстрація моїх умінь для мого портфоліо.</p>
+    
+    <div class="dev-details">
+        <div class="dev-line">
+            <span>Email:</span>
+            <a href="mailto:arisnow001@gmail.com">arisnow001@gmail.com</a>
+        </div>
+        <div class="dev-line">
+            <span>Web:</span>
+            <a href="https://arisnow0.github.io/" target="_blank">arisnow0.github.io</a>
+        </div>
+    </div>
+    
+    <div class="portfolio-status">Available for projects 2026</div>
+</div>
+        </div>
+    </div>
+</section>
 
     <footer>
-        <p>© 2026 FoodTruck</p>
+        <p>Created for my portfolio by ArisNow0</p>
     </footer>
 
     <script src="script.js"></script>
