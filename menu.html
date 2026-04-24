@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="FatTruck - Сайт вуличної їжі у Дніпрі. Створено для мого портфоліо.">
+    <meta property="og:title" content="FatTruck - Смачно. Швидко. Свіжо.">
+    <meta property="og:description" content="FatTruck - Сайт вуличної їжі у Дніпрі. Створено для мого портфоліо.">
+    <meta property="og:image" content="/image/Logo/Logo.png">
+    <meta property="og:url" content="https://arisnow0.github.io/fattruck/">
+    <meta name="theme-color" content="#ffb25b">
+    <title>FatTruck - Смачно. Швидко. Свіжо.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/06763759a1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
+    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link rel="icon" type="image/png" href="/image/Logo/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/image/Logo/favicon.svg" />
+    <link rel="shortcut icon" href="/image/Logo/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/image/Logo/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="FatTruck" />
+    <link rel="manifest" href="/image/Logo/site.webmanifest" />
+</head>
+
+<body>
+
+<header>
+    <a href="index.html" class="logo-link">
+        <div class="logo">FAT<span>TRUCK</span></div>
+    </a>
+    <div class="color"></div>
+    
+    <nav class="headbutt">
+        <a class="activehead" href="menu.html">Меню</a>
+        <a href="index.html#deals">Знижки</a>
+        <a href="index.html#map">Де нас знайти</a>
+        <a href="index.html#contact">Контакти</a>
+    </nav>
+
+    <div class="burger-icon" id="burger-menu">
+        <i class="fa-solid fa-burger"></i>
+    </div>
+
+    <nav class="headbut" id="nav-links">
+        <a href="#menu">Меню</a>
+        <a href="#deals">Знижки</a>
+        <a href="#map">Де нас знайти</a>
+        <a href="#contact">Контакти</a>
+    </nav>
+</header>
+
+ <section class="menusec">
+    <div class="menu-legend">
+        <h1>меню</h1>
+        <p>Найкращі страви</p>
+    </div>
+
+    <div class="item">
+
+    </div>
+ </section>
+
+    <!-- СПЕЦІАЛЬНІ ПРОПОЗИЦІЇ -->
+    <section id="deals" class="deals">
+        <video autoplay muted loop playsinline poster="image/burg.jpg">
+            <source src="video/burg.mp4" type="video/mp4">
+        </video>
+        <div class="overlay">
+            <h2>Спеціальна Пропозиція</h2>
+            <div class="cards">
+                <div class="card"><img class="imgcard" src="image/menu/BurgerM.jpg" alt="Бургер">
+                    <h1>-20% на бургери до 18:00</h1>
+                </div>
+                <div class="card"><img class="imgcard" src="image/menu/HotDogM.jpg" alt="Хот-дог">
+                    <h1>3 за ціною 2</h1>
+                </div>
+                <div class="card"><img class="imgcard" src="image/menu/ComboM.jpg" alt="Комбо">
+                    <h1>Комбо! Бургер, картопля, напій!</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- КОНТАКТЫ -->
+<section id="contact" class="contact">
+    <div class="overlay">
+        <h2>На зв'язку</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span class="contact-label">Телефон:</span>
+                    <a href="tel:+380633340251" class="contact-value">+380 63 334 02 51</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-label">Локація:</span>
+                    <span class="contact-value">Дніпро, Україна</span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-label">Соцмережі:</span>
+                    <div class="social-links">
+                        <a target="_blank" href="https://arisnow0.github.io/">INSTAGRAM</a>
+                        <a target="_blank" href="https://t.me/ArisNow">TELEGRAM</a>
+                        <a target="_blank" href="https://arisnow0.github.io/">TIKTOK</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="developer-card">
+    <div class="dev-badge">DEVELOPER</div>
+    <h3>Про проєкт</h3>
+    <p>Цей сайт створений мною як демонстрація моїх умінь для мого портфоліо.</p>
+    
+    <div class="dev-details">
+        <div class="dev-line">
+            <span>Email:</span>
+            <a href="mailto:arisnow001@gmail.com">arisnow001@gmail.com</a>
+        </div>
+        <div class="dev-line">
+            <span>Web:</span>
+            <a href="https://arisnow0.github.io/" target="_blank">arisnow0.github.io</a>
+        </div>
+    </div>
+    
+    <div class="portfolio-status">Available for projects 2026</div>
+</div>
+        </div>
+    </div>
+</section>
+
+    <footer>
+        <p>Created for my portfolio by ArisNow0</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

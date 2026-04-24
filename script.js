@@ -356,7 +356,7 @@ async function initMap() {
   });
 
   const truckIcon = L.icon({
-    iconUrl: 'image/logo/logo.png',
+    iconUrl: 'image/Logo/Logo.png',
     iconSize: [60, 60],
     iconAnchor: [30, 30]
   });
